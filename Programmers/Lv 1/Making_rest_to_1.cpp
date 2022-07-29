@@ -4,7 +4,6 @@
 #include <vector>
 
 
-// testing
 using namespace std;
 
 int solution(int n) {
