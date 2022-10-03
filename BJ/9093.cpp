@@ -17,14 +17,13 @@ int main(){
         stack<char> s;
         getline(cin, input);
         
-
         for(int j = 0 ; j < input.length() ; j++){
             if(input[j] == ' '){
                 while(!s.empty()){
                     result += s.top();
                     s.pop();
                 }
-                 result += " ";
+                result += " ";
             }
             else{
                 s.push(input[j]);
