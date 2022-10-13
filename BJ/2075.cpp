@@ -1,4 +1,5 @@
 #include <iostream>
+#include <functional>
 #include <queue>
 
 using namespace std;
@@ -8,16 +9,16 @@ int main(){
     cin.tie(NULL);
 
     int n, input;
-    priority_queue<int> q;
+    priority_queue<int, vector<int> , greater<int>> q;
     cin >> n;
 
     for(int i = 0 ; i < n * n ; i++){
         cin >> input;
-        q.push(input);
-    }
-
-    for(int i = 0 ; i < n-1 ; i++){
-        q.pop();
+        if(q.size() >= n){
+            q.push(input);
+            q.pop();
+        }
+        else{ q.push(input); }
     }
     cout << q.top();
     return 0;
