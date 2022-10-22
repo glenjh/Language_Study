@@ -17,14 +17,13 @@ void DFS(int x, int y, string temp, int cnt){
         return; 
     }
 
-    temp += arr[x][y];
     for(int i = 0 ; i < 4 ; i++){
         int x_move = x + dir_x[i];
         int y_move = y + dir_y[i];
 
         if(x_move < 0 || y_move < 0 || x_move >= 5 || y_move >= 5){ continue; }
         string a = temp;
-        a.append(arr[x_move][y_move]);
+        a += arr[x_move][y_move];
         DFS(x_move, y_move, a ,cnt+1);
     }
 }
@@ -42,8 +41,8 @@ int main(){
             DFS(i, j, one, 1);
         }
     }
-    for(auto it : s){
-        cout << it << " ";
-    }
+
+    cout << s.size();
+
     return 0;
 }
