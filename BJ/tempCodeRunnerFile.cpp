@@ -1,4 +1,1 @@
-
-    for(int i = 1 ; i <= n ; i++){
-        cout << cnt[i] << ' ';
-    }
+if(cnt[move_z][move_x][move_y] > 0){ continue; }
