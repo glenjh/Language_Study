@@ -4,7 +4,7 @@
 using namespace std;
 
 int a, b, cnt = 0, mini = 1000, curr, answer = 1;
-vector<int> v;
+
 
 int main(){
     ios_base::sync_with_stdio(false);
@@ -14,6 +14,7 @@ int main(){
     int easy = abs(a - b);
 
     int n;
+    vector<int> v;
     cin >> n;
 
     for(int i = 0 ; i < n ; i++){
@@ -25,7 +26,6 @@ int main(){
             cout << 1 << '\n';
             return 0;
         }
-
     }
 
     for(int i = 0 ; i < v.size() ; i++){
@@ -36,8 +36,9 @@ int main(){
         }
     }
 
-    if(easy < mini){
+    if(easy <= mini){
         answer = easy;
+
     }else{
         answer += abs(b - curr);
     }
